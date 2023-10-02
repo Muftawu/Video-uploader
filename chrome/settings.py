@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 if DEBUG:
-    CSRF_TRUSTED_ORIGINS = ["https://hngx-production-6712.up.railway.app"]
+    CSRF_TRUSTED_ORIGINS = ["https://web-production-8cdc.up.railway.app"]
 
 ALLOWED_HOSTS = []
 
