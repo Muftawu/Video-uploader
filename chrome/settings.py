@@ -31,8 +31,6 @@ ALLOWED_HOSTS = ['web-production-8cdc.up.railway.app']
 if DEBUG:
     CSRF_TRUSTED_ORIGINS = ["https://web-production-8cdc.up.railway.app"]
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
