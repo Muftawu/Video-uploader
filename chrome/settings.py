@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-8cdc.up.railway.app']
+ALLOWED_HOSTS = ['*']
 
 if DEBUG:
     CSRF_TRUSTED_ORIGINS = ["https://web-production-8cdc.up.railway.app"]
@@ -81,10 +81,21 @@ WSGI_APPLICATION = 'chrome.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'TTlCuC4OLmhhHgHmel55',
+        'HOST': 'containers-us-west-149.railway.app',
+        'PORT': '5503',
     }
 }
 

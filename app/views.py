@@ -28,7 +28,7 @@ def upload(request):
     try:
         file = request.FILES.get('video_file')
         if file:
-            Video.objects.create(name='test_upload', file=file)
+            Video.objects.create(name='test', file=file)
         return Response({'message': 'File uploaded successfully'})
     except:
         return Response({'message': 'File upload failed'})
